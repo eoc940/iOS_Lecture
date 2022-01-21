@@ -1,6 +1,110 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import PlaygroundSupport
+
+let strikes = PublishSubject<String>()
+let disposeBag = DisposeBag()
+/* // ignoreElement
+strikes
+    .ignoreElements()
+    .subscribe { _ in
+        print("[Subscription is called]")
+    }.disposed(by: disposeBag)
+
+strikes.onNext("A")
+strikes.onNext("B")
+strikes.onNext("C")
+
+strikes.onCompleted() // ignoreElement로 A, B, C가 나타나지 않고, oncompleted 되었을 때 print가 실행됨
+
+*/
+
+/* // elemantAt
+strikes.elementAt(2)
+    .subscribe(onNext: { _ in
+        print("You are out!")
+    }).disposed(by: disposeBag)
+
+strikes.onNext("X")
+strikes.onNext("Y")
+strikes.onNext("Z")
+*/
+
+/* filter
+Observable.of(1,2,3,4,5,6,7)
+    .filter { $0 % 2 == 0 }
+    .subscribe(onNext: {
+        print($0)
+    }).disposed(by: disposeBag)
+ */
+/* skip
+Observable.of("A", "B", "C", "D", "E", "F")
+    .skip(3)
+    .subscribe(onNext : {
+        print($0)
+    }).disposed(by: disposeBag)
+
+ */
+
+/* skipWhile
+Observable.of(2,2,3,4,4)
+    .skipWhile { $0 % 2 == 0 } // 순서대로 반복하다가 조건이 만족하지 않는 경우에는 skip이 stop된다
+    .subscribe(onNext: {
+        print($0)
+    }).disposed(by: disposeBag)
+  
+ */
+
+/* skipUntil
+let subject = PublishSubject<String>()
+let trigger = PublishSubject<String>()
+
+subject.skipUntil(trigger)
+    .subscribe(onNext: {
+        print($0)
+    }).disposed(by: disposeBag)
+
+subject.onNext("A")
+subject.onNext("B")
+trigger.onNext("X") // trigger 이후의 것들만 출력된다
+subject.onNext("C")
+ */
+
+/* take
+Observable.of(1,2,3,4,5,6)
+    .take(3)
+    .subscribe(onNext: {
+        print($0)
+    }).disposed(by: disposeBag)
+ */
+/* takeWhile
+Observable.of(2,4,6,7,8,10)
+    .takeWhile { // 조건이 false이면 그때부터 리턴하지 않는다
+        return $0 % 2 == 0
+    }.subscribe(onNext: {
+        print($0)
+    }).disposed(by: disposeBag)
+ */
+
+/* takeUntil
+let subject = PublishSubject<String>()
+let trigger = PublishSubject<String>()
+
+subject.takeUntil(trigger)
+    .subscribe(onNext: {
+        print($0)
+    }).disposed(by: disposeBag)
+
+subject.onNext("1")
+subject.onNext("2")
+
+trigger.onNext("X") // 트리거가 동작하기 전까지만 동작
+
+subject.onNext("3")
+ */
+
+
 
 
 /*
@@ -141,7 +245,7 @@ variable.asObservable()
 variable.value.append("Item 2")
 */
 
-
+/*
 let disposeBag = DisposeBag()
 // BehaviorRelay를 사용하기 위해서는 Rxcocoa import해야함
 let relay = BehaviorRelay(value: ["Item 1"])
@@ -162,7 +266,7 @@ relay.asObservable()
     .subscribe {
         print($0)
     }
-
+*/
 
 
 
