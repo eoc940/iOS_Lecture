@@ -6,6 +6,103 @@ import PlaygroundSupport
 let strikes = PublishSubject<String>()
 let disposeBag = DisposeBag()
 
+
+/* scan
+let source = Observable.of(1,2,3,5,6)
+
+source.scan(0, accumulator: +)
+    .subscribe(onNext: {
+        print($0)
+    }).disposed(by: disposeBag)
+ */
+
+/* Reduce
+let source = Observable.of(1,2,3)
+
+source.reduce(0, accumulator: +)
+    .subscribe(onNext: {
+        print($0)
+    }).disposed(by: disposeBag)
+ */
+
+/* With Latest form
+let button = PublishSubject<Void>()
+let textField = PublishSubject<String>()
+
+let observable = button.withLatestFrom(textField)
+let disposable = observable.subscribe(onNext: {
+    print($0)
+})
+let a = "ffdfdf"
+textField.onNext("Swif")
+textField.onNext("Swift")
+textField.onNext("Swift Rocks!")
+
+button.onNext(())
+button.onNext(())
+*/
+/* combineLatest
+let left = PublishSubject<Int>()
+let right = PublishSubject<Int>()
+
+let observable = Observable.combineLatest(left, right, resultSelector:{
+    lastLeft, lastRight in
+    "\(lastLeft) \(lastRight)"
+})
+
+let disposable = observable.subscribe(onNext: { value in
+    print(value)
+})
+
+left.onNext(45)
+right.onNext(1)
+left.onNext(30)
+right.onNext(99)
+right.onNext(2)
+ */
+
+/* merge
+let left = PublishSubject<Int>()
+let right = PublishSubject<Int>()
+
+let source = Observable.of(left.asObservable(), right.asObservable())
+
+let observable = source.merge()
+observable.subscribe(onNext: {
+    print($0)
+}).disposed(by: disposeBag)
+
+left.onNext(5)
+left.onNext(3)
+right.onNext(2)
+right.onNext(1)
+left.onNext(99)
+*/
+
+/* concat
+let first = Observable.of(1,2,3)
+let second = Observable.of(4,5,6)
+
+let observable = Observable.concat([first, second])
+
+observable.subscribe(onNext: {
+    print($0)
+}).disposed(by: disposeBag)
+ */
+
+
+/* startWith
+
+let numbers = Observable.of(2,3,4)
+
+let observable = numbers.startWith(1)
+observable.subscribe(onNext: {
+    print($0)
+}).disposed(by: disposeBag)
+*/
+ 
+ 
+/* flatMapLatest
 struct Student {
     var score: BehaviorRelay<Int>
 }
@@ -28,7 +125,7 @@ student.onNext(mary)
 mary.score.accept(80)
 
 john.score.accept(43)
-
+ */
 
 /* map
 Observable.of(1,2,3,4,5)
