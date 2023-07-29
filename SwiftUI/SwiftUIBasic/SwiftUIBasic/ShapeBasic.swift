@@ -1,13 +1,13 @@
 //
-//  ContentView.swift
-//  ShapeBasic
+//  ShapeBasic.swift
+//  SwiftUIBasic
 //
-//  Created by Khg Dev on 2023/07/28.
+//  Created by Khg Dev on 2023/07/29.
 //
 
 import SwiftUI
 
-struct ContentView: View {
+struct ShapeBasic: View {
     var body: some View {
         VStack(spacing: 20) {
             // Circle 원형
@@ -59,8 +59,9 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct ShapeBasic_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ShapeBasic()
     }
 }
+
