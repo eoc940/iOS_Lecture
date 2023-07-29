@@ -16,6 +16,7 @@
 		32312C962A74F1C100B6FBAE /* ColorBasic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32312C952A74F1C100B6FBAE /* ColorBasic.swift */; };
 		32312C982A74F45700B6FBAE /* GradientBasic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32312C972A74F45700B6FBAE /* GradientBasic.swift */; };
 		32312C9A2A74F6B900B6FBAE /* IconBasic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32312C992A74F6B900B6FBAE /* IconBasic.swift */; };
+		32312C9C2A74F8E100B6FBAE /* ImageBasic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32312C9B2A74F8E100B6FBAE /* ImageBasic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		32312C952A74F1C100B6FBAE /* ColorBasic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorBasic.swift; sourceTree = "<group>"; };
 		32312C972A74F45700B6FBAE /* GradientBasic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBasic.swift; sourceTree = "<group>"; };
 		32312C992A74F6B900B6FBAE /* IconBasic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconBasic.swift; sourceTree = "<group>"; };
+		32312C9B2A74F8E100B6FBAE /* ImageBasic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageBasic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				32312C952A74F1C100B6FBAE /* ColorBasic.swift */,
 				32312C972A74F45700B6FBAE /* GradientBasic.swift */,
 				32312C992A74F6B900B6FBAE /* IconBasic.swift */,
+				32312C9B2A74F8E100B6FBAE /* ImageBasic.swift */,
 				32312C6D2A72C8E700B6FBAE /* Assets.xcassets */,
 				32312C6F2A72C8E700B6FBAE /* Preview Content */,
 			);
@@ -152,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32312C9C2A74F8E100B6FBAE /* ImageBasic.swift in Sources */,
 				32312C982A74F45700B6FBAE /* GradientBasic.swift in Sources */,
 				32312C9A2A74F6B900B6FBAE /* IconBasic.swift in Sources */,
 				32312C782A72C93400B6FBAE /* TextBasic.swift in Sources */,
